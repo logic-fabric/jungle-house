@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../styles/Cart.css";
+
 class Cart extends React.Component {
   render() {
     const prices = {
@@ -9,7 +11,7 @@ class Cart extends React.Component {
     };
 
     return (
-      <section>
+      <section className="jh-cart">
         <h2>Panier</h2>
 
         <ul>

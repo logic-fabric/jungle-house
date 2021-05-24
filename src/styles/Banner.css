@@ -1,0 +1,19 @@
+.jh-banner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  padding: 2rem;
+  border-bottom: 0.25rem solid black;
+
+  text-align: right;
+}
+
+.jh-title {
+  padding: 0 0 0 2rem;
+}
+
+.jh-logo {
+  width: 3rem;
+  height: 3rem;
+}
