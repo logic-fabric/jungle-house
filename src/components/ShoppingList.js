@@ -1,6 +1,7 @@
 import React from "react";
 
 import { plantList } from "../data/plantList";
+import "../styles/ShoppingList.css";
 
 class ShoppingList extends React.Component {
   render() {
@@ -12,14 +13,23 @@ class ShoppingList extends React.Component {
 
     return (
       <div>
-        <ul>
+        <ul className="jh-plants-categories">
           {categories.map((category, index) => (
-            <li key={`${category}-${index}`}>{category}</li>
+            <li className="jh-plant-category" key={`${category}-${index}`}>
+              {category}
+            </li>
           ))}
         </ul>
-        <ul>
+        <ul className="jh-plants-list">
           {plantList.map((plant) => (
-            <li key={`${plant.id}`}>{plant.name}</li>
+            <li className="jh-plant-item" key={`${plant.id}`}>
+              {plant.name}{" "}
+              {plant.isBestSale ? (
+                <span className="jh-best-sales">meilleures ventes</span>
+              ) : (
+                ""
+              )}
+            </li>
           ))}
         </ul>
       </div>

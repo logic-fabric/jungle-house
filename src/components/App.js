@@ -1,7 +1,7 @@
 import React from "react";
 
 import Banner from "./Banner";
-import Cart from "./Cart";
+//import Cart from "./Cart";
 import ShoppingList from "./ShoppingList";
 
 import "../styles/App.css";
@@ -9,11 +9,11 @@ import "../styles/App.css";
 class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <div className="app-wrapper">
         <Banner />
-        <Cart />
+        {/* <Cart /> */}
         <ShoppingList />
-      </React.Fragment>
+      </div>
     );
   }
 }

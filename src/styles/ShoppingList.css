@@ -1,0 +1,54 @@
+.jh-plants-categories,
+.jh-plants-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  max-width: 50rem;
+  margin: 2rem 0 1rem 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.jh-plants-list {
+  justify-content: space-between;
+}
+
+.jh-plant-category {
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+
+  color: white;
+  font-size: 1.2rem;
+
+  background: #31b572;
+}
+
+.jh-plant-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 14rem;
+  height: 10rem;
+  margin: 1rem 0;
+  padding: 1rem;
+
+  border: 0.125rem solid #333;
+  border-radius: 0.5rem;
+}
+
+.jh-best-sales {
+  display: inline-block;
+
+  margin: 0 0 0 1rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 1rem;
+
+  color: white;
+  font-size: 0.8rem;
+
+  background: #31b572;
+}
