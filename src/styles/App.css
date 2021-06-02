@@ -1,5 +1,29 @@
+/* 
+Jungle House colors
+-------------------
+
+$primary-100: #d7f4e6;
+$primary-300: #73d9a5;
+$primary-500: #31b572;
+$primary-700: #1a613d;
+$primary-900: #0a2517;
+
+$tonic-100: #d6f7ff;
+$tonic-300: #85e7fe;
+$tonic-500: #04c3f0;
+$tonic-700: #026178;
+$tonic-900: #01303b;
+
+$neutral-100: #fffef9;
+$neutral-300: #dddeda;
+$neutral-500: #99989c;
+$neutral-700: #44444e;
+$neutral-900: #333341;
+*/
+
 .app-wrapper {
   max-width: 50rem;
   margin: auto;
-}
 
+  color: #333341;
+}
