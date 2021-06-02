@@ -14,14 +14,14 @@ class ShoppingList extends React.Component {
 
     return (
       <div>
-        <ul className="jh-plants-categories">
+        <ul className="plants__categories">
           {categories.map((category, index) => (
-            <li className="jh-plant-category" key={`${category}-${index}`}>
+            <li className="plant-category" key={`${category}-${index}`}>
               {category}
             </li>
           ))}
         </ul>
-        <ul className="jh-plants-list">
+        <ul className="plants__gallery">
           {PLANT_LIST.map(({id, name, water, light, cover}) => (
             <PlantItem
               key={`${name}-${id}`}

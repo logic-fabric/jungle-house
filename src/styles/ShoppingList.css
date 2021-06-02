@@ -1,54 +1,42 @@
-.jh-plants-categories,
-.jh-plants-list {
+.plants__categories,
+.plants__gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 
   max-width: 50rem;
-  margin: 2rem 0 1rem 0;
+  margin: 1rem 0;
   padding: 0;
 
   list-style-type: none;
 }
 
-.jh-plants-list {
+.plants__gallery {
   justify-content: space-between;
 }
 
-.jh-plant-category {
-  padding: 1rem 2rem;
+.plant-category {
+  min-width: 5rem;
   margin: 1rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
 
-  color: white;
-  font-size: 1.2rem;
+  color: #fffef9;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
 
-  background: #31b572;
+  background: #1a613d;
+  transition: box-shadow 250ms, background-color 250ms, transform 250ms;
+
+  cursor: pointer;
 }
 
-.jh-plant-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 14rem;
-  height: 10rem;
-  margin: 1rem 0;
-  padding: 1rem;
-
-  border: 0.125rem solid #333;
-  border-radius: 0.5rem;
-}
-
-.jh-best-sales {
-  display: inline-block;
-
-  margin: 0 0 0 1rem;
-  padding: 0.125rem 0.5rem;
-  border-radius: 1rem;
+.plant-category:hover {
+  box-shadow: 0 0.5rem 0.5rem #dddeda;
 
   color: white;
-  font-size: 0.8rem;
 
   background: #31b572;
+  transform: translateY(-1px);
 }

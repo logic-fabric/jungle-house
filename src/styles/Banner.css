@@ -3,13 +3,18 @@
   justify-content: flex-end;
   align-items: center;
   padding: 2rem;
-  border-bottom: 0.25rem solid black;
+  border-bottom: 0.25rem solid #1a613d;
 
+  color: #0a2517;
   text-align: right;
+
+  background: linear-gradient(160deg, #73d9a5, #d7f4e6 70%, white);;
 }
 
 .banner__title {
   padding: 0 0 0 2rem;
+
+  color: #1a613d;
 }
 
 .banner__logo {
@@ -20,5 +25,8 @@
 .banner__headline {
   font-size: 1.2rem;
   font-style: italic;
+  font-weight: 700;
   text-align: right;
+
+  color: #026178;
 }
