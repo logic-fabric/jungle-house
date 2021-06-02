@@ -34,10 +34,16 @@
 
 .plant-item__infos {
   padding: 1rem;
+
+  color: #1a613d;
 }
 
 .plant-item__title {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.5rem 0;
+}
 
-  color: #1a613d;
+.plant-item__scales {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }

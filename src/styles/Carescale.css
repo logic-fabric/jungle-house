@@ -1,0 +1,15 @@
+.carescale {
+  margin: 0.5rem 0 0 1rem;
+}
+
+.carescale__icon {
+  margin: 0 0.25rem 0 0;
+}
+
+.carescale__icon.fa-sun {
+  color: #debf27;
+}
+
+.carescale__icon.fa-tint {
+  color: #04c3f0;
+}

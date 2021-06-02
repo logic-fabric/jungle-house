@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../styles/Carescale.css";
+
 class CareScale extends React.Component {
   render(props) {
     const { id, scaleValue, careType } = this.props;
@@ -8,11 +10,11 @@ class CareScale extends React.Component {
     const scales = [1, 2, 3];
 
     return (
-      <div>
+      <div className="carescale">
         {scales.map((scale) =>
           scale <= scaleValue ? (
             <span
-              className={scaleTypeIcon}
+              className={`carescale__icon ${scaleTypeIcon}`}
               key={`${careType}-${scale}-${id}`}
             ></span>
           ) : null
