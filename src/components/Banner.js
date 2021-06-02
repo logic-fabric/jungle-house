@@ -1,7 +1,7 @@
 import React from "react";
 
-import "../styles/Banner.css";
 import logo from "../assets/logo.png";
+import "../styles/Banner.css";
 
 class Banner extends React.Component {
   render() {

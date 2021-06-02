@@ -1,11 +1,12 @@
 import React from "react";
 
-import { plantList } from "../data/plantList";
+import { PLANT_LIST } from "../data/plantList";
+import PlantItem from "./PlantItem";
 import "../styles/ShoppingList.css";
 
 class ShoppingList extends React.Component {
   render() {
-    const categories = plantList.reduce(
+    const categories = PLANT_LIST.reduce(
       (acc, plant) =>
         acc.includes(plant.category) ? acc : acc.concat(plant.category),
       []
@@ -21,15 +22,15 @@ class ShoppingList extends React.Component {
           ))}
         </ul>
         <ul className="jh-plants-list">
-          {plantList.map((plant) => (
-            <li className="jh-plant-item" key={`${plant.id}`}>
-              {plant.name}{" "}
-              {plant.isBestSale ? (
-                <span className="jh-best-sales">meilleures ventes</span>
-              ) : (
-                ""
-              )}
-            </li>
+          {PLANT_LIST.map(({id, name, water, light, cover}) => (
+            <PlantItem
+              key={`${name}-${id}`}
+              id={id}
+              name={name}
+              water={water}
+              light={light}
+              cover={cover}
+            />
           ))}
         </ul>
       </div>
