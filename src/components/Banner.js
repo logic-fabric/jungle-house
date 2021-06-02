@@ -12,16 +12,18 @@ class Banner extends React.Component {
     const springEnd = new Date(currentDate.getFullYear(), 5, 20);
 
     const isSpring = currentDate >= springBegin && currentDate < springEnd;
+
     const recommendation = isSpring
       ? "C'est le printemps, il est temps de rempoter !"
       : "Ce n'est pas encore le moment de rempoter";
+
     return (
       <div>
-        <div className="jh-banner">
-          <img className="jh-logo" src={logo} alt="Jungle House" />
-          <h1 className="jh-title">{title}</h1>
+        <div className="banner">
+          <img className="banner__logo" src={logo} alt="Jungle House" />
+          <h1 className="banner__title">{title}</h1>
         </div>
-        <p className="jh-headline">{recommendation}</p>
+        <p className="banner__headline">{recommendation}</p>
       </div>
     );
   }
