@@ -2,6 +2,12 @@ import React from "react";
 
 import "../styles/Carescale.css";
 
+const CARE_LEVEL = {
+  1: "un peu",
+  2: "assez",
+  3: "beaucoup",
+};
+
 class CareScale extends React.Component {
   render(props) {
     const { id, scaleValue, careType } = this.props;
@@ -10,7 +16,16 @@ class CareScale extends React.Component {
     const scales = [1, 2, 3];
 
     return (
-      <div className="carescale">
+      <button
+        className="carescale"
+        onClick={() =>
+          alert(
+            `Cette plante nécessite ${CARE_LEVEL[scaleValue]} ${
+              careType === "light" ? "de soleil" : "d'eau"
+            }.`
+          )
+        }
+      >
         {scales.map((scale) =>
           scale <= scaleValue ? (
             <span
@@ -19,7 +34,7 @@ class CareScale extends React.Component {
             ></span>
           ) : null
         )}
-      </div>
+      </button>
     );
   }
 }

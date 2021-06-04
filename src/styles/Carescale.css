@@ -1,15 +1,33 @@
 .carescale {
-  margin: 0.5rem 0 0 1rem;
+  margin: 0.5rem 0 0 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #dddeda;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 0.5rem #dddeda;
+
+  background: #fffef9;
+  transition: box-shadow 200ms, background-color 200ms, opacity 200ms,
+    transform 200ms;
+
+  cursor: pointer;
+}
+
+.carescale:hover {
+  box-shadow: 0 0.25rem 1rem #dddeda;
+
+  background: white;
+  opacity: 0.75;
+  transform: translateY(-0.125rem);
 }
 
 .carescale__icon {
-  margin: 0 0.25rem 0 0;
+  margin: 0 0.125rem;
 }
 
 .carescale__icon.fa-sun {
-  color: #debf27;
+  color: #b59b1c;
 }
 
 .carescale__icon.fa-tint {
-  color: #04c3f0;
+  color: #026178;
 }
