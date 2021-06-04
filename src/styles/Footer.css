@@ -1,0 +1,43 @@
+footer {
+  padding: 1rem 2rem;
+  color: white;
+  text-align: center;
+
+  background: #026178;
+}
+
+.footer__headline {
+  margin: 0.5rem 0 1.5rem 0;
+
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.footer__newsletter-label {
+  font-weight: 500;
+}
+
+.footer__newsletter-input {
+  width: 12rem;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border: 0.125rem solid #026178;
+  border-radius: 2rem;
+
+  color: #01303b;
+  font-weight: 700;
+
+  transition: border-color 300ms;
+}
+
+.footer__newsletter-input:focus {
+  border-color: #04c3f0;
+  outline: none;
+}
+
+.footer__disclaimer {
+  margin-top: 1.5rem;
+
+  font-size: 0.85rem;
+  font-weight: 400;
+}
