@@ -2,15 +2,14 @@ import React, { useState } from "react";
 
 import "../styles/Cart.css";
 
-function Cart() {
-  const prices = {
-    monstera: 8,
-    ivy: 10,
-    flowers: 15,
-  };
-
-  const [cart, setCart] = useState(0);
+function Cart({ cart, setCart }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const items = Object.keys(cart);
+  const total = items.reduce(
+    (acc, item) => acc + cart[item].quantity * cart[item].price,
+    0
+  );
 
   return isOpen ? (
     <section className="cart cart--open">
@@ -22,14 +21,25 @@ function Cart() {
       <div className="cart__content">
         <h2 className="cart__title">Votre panier</h2>
 
-        <ul>
-          <li>Monstera {prices.monstera}&nbsp;€</li>
-          <button className="btn-add-to-cart" onClick={() => setCart(cart + 1)}>
-            Ajouter
-          </button>
-        </ul>
+        {items.length > 0 ? (
+          <ul>
+            {items.map((item) => (
+              <li key={item}>
+                {cart[item].quantity} {item} {cart[item].price}&nbsp;€
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>
+            <em>Votre panier est vide</em>
+          </p>
+        )}
 
-        <p className="cart-total">Total {cart * prices.monstera}&nbsp;€</p>
+        <p className="cart-total">Total {total}&nbsp;€</p>
+
+        <button className="btn-empty-cart" onClick={() => setCart({})}>
+          Vider le panier
+        </button>
       </div>
     </section>
   ) : (
@@ -40,16 +50,21 @@ function Cart() {
       </button>
 
       <div className="cart__content">
-        <h2>Votre panier</h2>
+        <h2 className="cart__title">Votre panier</h2>
 
-        <ul>
-          <li>Monstera {prices.monstera}&nbsp;€</li>
-          <button className="btn-add-to-cart" onClick={() => setCart(cart + 1)}>
-            Ajouter
-          </button>
-        </ul>
+        {items.length > 0 ? (
+          <ul>
+            {items.map((item) => (
+              <li key={item}>
+                {cart[item].quantity} {item} {cart[item].price}&nbsp;€
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>Votre panier est vide</p>
+        )}
 
-        <p className="cart-total">Total {cart * prices.monstera}&nbsp;€</p>
+        <p className="cart-total">Total {total}&nbsp;€</p>
       </div>
     </section>
   );

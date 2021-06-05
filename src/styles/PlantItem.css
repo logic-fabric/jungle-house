@@ -1,4 +1,6 @@
 .plant-item {
+  position: relative;
+
   width: 30%;
   height: 15rem;
   margin: 1rem 0;
@@ -18,6 +20,21 @@
   width: 100%;
 
   object-fit: cover;
+}
+
+.plant-item__price {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1000;
+
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  color: white;
+  font-weight: 700;
+
+  background: #31b572;
 }
 
 .plant-item__infos {

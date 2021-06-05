@@ -6,6 +6,7 @@ export const PLANT_LIST = [
     isBestSale: true,
     light: 2,
     water: 3,
+    price: 20,
     cover: "./assets/monstera.jpeg",
   },
   {
@@ -15,6 +16,7 @@ export const PLANT_LIST = [
     isBestSale: false,
     light: 3,
     water: 1,
+    price: 32,
     cover: "./assets/monstera.jpeg",
   },
   {
@@ -24,6 +26,7 @@ export const PLANT_LIST = [
     isBestSale: false,
     light: 1,
     water: 2,
+    price: 15,
     cover: "./assets/monstera.jpeg",
   },
   {
@@ -33,6 +36,7 @@ export const PLANT_LIST = [
     isBestSale: false,
     light: 3,
     water: 1,
+    price: 17,
     cover: "./assets/monstera.jpeg",
   },
   {
@@ -42,6 +46,7 @@ export const PLANT_LIST = [
     isBestSale: false,
     light: 3,
     water: 1,
+    price: 19,
     cover: "./assets/monstera.jpeg",
   },
   {
@@ -51,6 +56,7 @@ export const PLANT_LIST = [
     isBestSale: false,
     light: 2,
     water: 2,
+    price: 9,
     cover: "./assets/monstera.jpeg",
   },
   {
@@ -60,6 +66,7 @@ export const PLANT_LIST = [
     isBestSale: true,
     light: 2,
     water: 3,
+    price: 5,
     cover: "./assets/monstera.jpeg",
   },
   {
@@ -69,6 +76,7 @@ export const PLANT_LIST = [
     isBestSale: false,
     light: 2,
     water: 1,
+    price: 8,
     cover: "./assets/monstera.jpeg",
   },
   {
@@ -78,6 +86,7 @@ export const PLANT_LIST = [
     isBestSale: false,
     light: 2,
     water: 1,
+    price: 9,
     cover: "./assets/monstera.jpeg",
   },
 ];
