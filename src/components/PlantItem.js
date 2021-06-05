@@ -3,28 +3,45 @@ import React from "react";
 import CareScale from "./Carescale";
 import "../styles/PlantItem.css";
 
-class PlantItem extends React.Component {
-  render() {
-    const { id, name, water, light, price, cover } = this.props;
-    
-    return (
-      <li key={id} className="plant-item">
-        <div className="plant-item__cover">
-          <img src={cover} alt={name} />
-        </div>
+function PlantItem(props) {
+  const { cart, setCart, id, name, water, light, price, cover } = props;
 
-        <div className="plant-item__price">{price}&nbsp;€</div>
+  function addToCart(name, price) {
+    const items = Object.keys(cart);
 
-        <div className="plant-item__infos">
-          <h2 className="plant-item__title">{name}</h2>
-          <div className="plant-item__scales">
-            <CareScale id={id} careType="light" scaleValue={light} />
-            <CareScale id={id} careType="water" scaleValue={water} />
-          </div>
-        </div>
-      </li>
-    );
+    if (items.includes(name)) {
+      setCart({
+        ...cart,
+        [name]: { quantity: cart[name].quantity + 1, price },
+      });
+    } else {
+      setCart({
+        ...cart,
+        [name]: { quantity: 1, price },
+      });
+    }
   }
+
+  return (
+    <li key={id} className="plant-item">
+      <div className="plant-item__cover">
+        <img src={cover} alt={name} />
+      </div>
+
+      <div className="plant-item__price">{price}&nbsp;€</div>
+
+      <div className="plant-item__infos">
+        <h2 className="plant-item__title">{name}</h2>
+
+        <button onClick={() => addToCart(name, price)}>Ajouter</button>
+
+        <div className="plant-item__scales">
+          <CareScale id={id} careType="light" scaleValue={light} />
+          <CareScale id={id} careType="water" scaleValue={water} />
+        </div>
+      </div>
+    </li>
+  );
 }
 
 export default PlantItem;

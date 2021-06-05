@@ -11,22 +11,6 @@ function ShoppingList({ cart, setCart }) {
     []
   );
 
-  function addToCart(name, price) {
-    const items = Object.keys(cart);
-
-    if (items.includes(name)) {
-      setCart({
-        ...cart,
-        [name]: { quantity: cart[name].quantity + 1, price },
-      });
-    } else {
-      setCart({
-        ...cart,
-        [name]: { quantity: 1, price },
-      });
-    }
-  }
-
   return (
     <div>
       <ul className="plants__categories">
@@ -40,6 +24,9 @@ function ShoppingList({ cart, setCart }) {
         {PLANT_LIST.map(({ id, name, water, light, price, cover }) => (
           <React.Fragment>
             <PlantItem
+              cart={cart}
+              setCart={setCart}
+              
               key={`${name}-${id}`}
               id={id}
               name={name}
@@ -48,7 +35,6 @@ function ShoppingList({ cart, setCart }) {
               price={price}
               cover={cover}
             />
-            <button onClick={() => addToCart(name, price)}>Ajouter</button>
           </React.Fragment>
         ))}
       </ul>
