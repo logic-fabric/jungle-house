@@ -33,11 +33,18 @@ function PlantItem(props) {
       <div className="plant-item__infos">
         <h2 className="plant-item__title">{name}</h2>
 
-        <button onClick={() => addToCart(name, price)}>Ajouter</button>
+        <div className="plant-item__interactions">
+          <button
+            className="btn-add-to-cart"
+            onClick={() => addToCart(name, price)}
+          >
+            Ajouter
+          </button>
 
-        <div className="plant-item__scales">
-          <CareScale id={id} careType="light" scaleValue={light} />
-          <CareScale id={id} careType="water" scaleValue={water} />
+          <div className="plant-item__scales">
+            <CareScale id={id} careType="light" scaleValue={light} />
+            <CareScale id={id} careType="water" scaleValue={water} />
+          </div>
         </div>
       </div>
     </li>

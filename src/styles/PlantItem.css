@@ -29,6 +29,7 @@
   z-index: 1000;
 
   padding: 0.5rem 1rem;
+  border: 0.125rem solid #d7f4e6;
   border-radius: 0.5rem;
 
   color: white;
@@ -44,7 +45,34 @@
 }
 
 .plant-item__title {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.25rem 0;
+}
+
+.plant-item__interactions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-add-to-cart {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.125rem 0.5rem #dddeda;
+
+  color: white;
+  font-weight: 700;
+
+  background: #026178;
+  transition: box-shadow 200ms, opacity 200ms, transform 200ms;
+
+  cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+  box-shadow: 0 0.25rem 1rem #dddeda;
+
+  opacity: 0.85;
+  transform: translateY(-0.125rem);
 }
 
 .plant-item__scales {
