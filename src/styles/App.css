@@ -29,8 +29,14 @@ $neutral-900: #333341;
 */
 
 .app-wrapper {
-  max-width: 50rem;
+  max-width: 64rem;
   margin: auto;
+  padding: 0 2rem;
 
   color: #333341;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
 import Banner from "./Banner";
-//import Cart from "./Cart";
+import Cart from "./Cart";
 import ShoppingList from "./ShoppingList";
 import Footer from "./Footer";
 
@@ -12,8 +12,10 @@ class App extends React.Component {
     return (
       <div className="app-wrapper">
         <Banner />
-        {/* <Cart /> */}
-        <ShoppingList />
+        <main>
+          <Cart />
+          <ShoppingList />
+        </main>
         <Footer />
       </div>
     );
