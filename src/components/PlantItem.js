@@ -4,7 +4,17 @@ import CareScale from "./Carescale";
 import "../styles/PlantItem.css";
 
 function PlantItem(props) {
-  const { cart, setCart, id, name, water, light, price, cover } = props;
+  const {
+    cart,
+    setCart,
+    setCartIsOpen,
+    id,
+    name,
+    water,
+    light,
+    price,
+    cover,
+  } = props;
 
   function addToCart(name, price) {
     const items = Object.keys(cart);
@@ -36,7 +46,10 @@ function PlantItem(props) {
         <div className="plant-item__interactions">
           <button
             className="btn-add-to-cart"
-            onClick={() => addToCart(name, price)}
+            onClick={() => {
+              setCartIsOpen(true);
+              addToCart(name, price);
+            }}
           >
             Ajouter
           </button>

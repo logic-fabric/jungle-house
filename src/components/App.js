@@ -9,13 +9,23 @@ import "../styles/App.css";
 
 function App() {
   const [cart, setCart] = useState({});
+  const [cartIsOpen, setCartIsOpen] = useState(false);
 
   return (
     <div className="app-wrapper">
       <Banner />
       <main>
-        <Cart cart={cart} setCart={setCart} />
-        <ShoppingList cart={cart} setCart={setCart} />
+        <Cart
+          cart={cart}
+          setCart={setCart}
+          cartIsOpen={cartIsOpen}
+          setCartIsOpen={setCartIsOpen}
+        />
+        <ShoppingList
+          cart={cart}
+          setCart={setCart}
+          setCartIsOpen={setCartIsOpen}
+        />
       </main>
       <Footer />
     </div>

@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "../styles/Cart.css";
 
-function Cart({ cart, setCart }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+function Cart({ cart, setCart, cartIsOpen, setCartIsOpen }) {
   const items = Object.keys(cart);
   const total = items.reduce(
     (acc, item) => acc + cart[item].quantity * cart[item].price,
     0
   );
 
-  return isOpen ? (
+  return cartIsOpen ? (
     <section className="cart cart--open">
-      <button onClick={() => setIsOpen(false)}>
-        <i class="fas fa-shopping-cart"></i>
-        <i class="fas fa-chevron-circle-left"></i>
+      <button onClick={() => setCartIsOpen(false)}>
+        <i className="fas fa-shopping-cart"></i>
+        <i className="fas fa-chevron-circle-left"></i>
       </button>
 
       <div className="cart__content">
@@ -25,7 +23,7 @@ function Cart({ cart, setCart }) {
           <ul>
             {items.map((item) => (
               <li key={item}>
-                {cart[item].quantity} {item} {cart[item].price}&nbsp;€
+                {cart[item].quantity} {item} à {cart[item].price}&nbsp;€
               </li>
             ))}
           </ul>
@@ -44,9 +42,9 @@ function Cart({ cart, setCart }) {
     </section>
   ) : (
     <section className="cart">
-      <button onClick={() => setIsOpen(true)}>
-        <i class="fas fa-shopping-cart"></i>
-        <i class="fas fa-chevron-circle-right"></i>
+      <button onClick={() => setCartIsOpen(true)}>
+        <i className="fas fa-shopping-cart"></i>
+        <i className="fas fa-chevron-circle-right"></i>
       </button>
 
       <div className="cart__content">
@@ -56,7 +54,7 @@ function Cart({ cart, setCart }) {
           <ul>
             {items.map((item) => (
               <li key={item}>
-                {cart[item].quantity} {item} {cart[item].price}&nbsp;€
+                {cart[item].quantity} {item} à {cart[item].price}&nbsp;€
               </li>
             ))}
           </ul>
