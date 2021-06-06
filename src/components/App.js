@@ -11,6 +11,7 @@ import "../styles/App.css";
 function App() {
   const [cart, setCart] = useState({});
   const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("all");
 
   return (
     <div className="app-wrapper">
@@ -23,11 +24,15 @@ function App() {
           setCartIsOpen={setCartIsOpen}
         />
         <div>
-          <Categories />
+          <Categories
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
           <ShoppingList
             cart={cart}
             setCart={setCart}
             setCartIsOpen={setCartIsOpen}
+            selectedCategory={selectedCategory}
           />
         </div>
       </main>

@@ -27,7 +27,8 @@
   cursor: pointer;
 }
 
-.plant-category:hover {
+.plant-category:hover,
+.plant-category.selected-category {
   box-shadow: 0 0.5rem 0.5rem #dddeda;
 
   color: white;

@@ -1,7 +1,11 @@
+.shopping-list {
+  min-height: 51rem;
+}
+
 .plants__gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   max-width: 60rem;
   margin: 1rem 0;
