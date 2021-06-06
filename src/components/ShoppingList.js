@@ -6,7 +6,7 @@ function ShoppingList({ cart, setCart, setCartIsOpen, selectedCategory }) {
   return (
     <div className="shopping-list">
       <ul className="plants__gallery">
-        {PLANT_LIST.map(({ id, name, category, water, light, price, cover }) =>
+        {PLANT_LIST.map(({ id, name, category, isBestSale, water, light, price, cover }) =>
           selectedCategory === category || selectedCategory === "all" ? (
             <PlantItem
               cart={cart}
@@ -15,6 +15,7 @@ function ShoppingList({ cart, setCart, setCartIsOpen, selectedCategory }) {
               key={`${name}-${id}`}
               id={id}
               name={name}
+              isBestSale={isBestSale}
               water={water}
               light={light}
               price={price}

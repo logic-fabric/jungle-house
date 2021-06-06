@@ -8,6 +8,7 @@ function PlantItem(props) {
     setCartIsOpen,
     id,
     name,
+    isBestSale,
     water,
     light,
     price,
@@ -34,6 +35,12 @@ function PlantItem(props) {
     <li key={id} className="plant-item">
       <div className="plant-item__cover">
         <img src={cover} alt={name} />
+
+        {isBestSale ? (
+          <div className="plant-item__best-seller">Meilleures ventes</div>
+        ) : (
+          ""
+        )}
       </div>
 
       <div className="plant-item__price">{price}&nbsp;€</div>
