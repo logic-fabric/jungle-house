@@ -1,5 +1,3 @@
-import React from "react";
-
 import "../styles/Cart.css";
 
 function Cart({ cart, setCart, cartIsOpen, setCartIsOpen }) {

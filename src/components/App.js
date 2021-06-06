@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 import Banner from "./Banner";
 import Cart from "./Cart";
+import Categories from "./Categories";
 import ShoppingList from "./ShoppingList";
 import Footer from "./Footer";
 
@@ -21,11 +22,14 @@ function App() {
           cartIsOpen={cartIsOpen}
           setCartIsOpen={setCartIsOpen}
         />
-        <ShoppingList
-          cart={cart}
-          setCart={setCart}
-          setCartIsOpen={setCartIsOpen}
-        />
+        <div>
+          <Categories />
+          <ShoppingList
+            cart={cart}
+            setCart={setCart}
+            setCartIsOpen={setCartIsOpen}
+          />
+        </div>
       </main>
       <Footer />
     </div>

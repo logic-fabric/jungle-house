@@ -1,5 +1,3 @@
-import React from "react";
-
 import CareScale from "./Carescale";
 import "../styles/PlantItem.css";
 

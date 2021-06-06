@@ -1,0 +1,37 @@
+.plants__categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 60rem;
+  margin: 1rem 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.plant-category {
+  min-width: 5rem;
+  margin: 1rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+
+  color: #fffef9;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+
+  background: #1a613d;
+  transition: box-shadow 250ms, background-color 250ms, transform 250ms;
+
+  cursor: pointer;
+}
+
+.plant-category:hover {
+  box-shadow: 0 0.5rem 0.5rem #dddeda;
+
+  color: white;
+
+  background: #31b572;
+  transform: translateY(-1px);
+}
