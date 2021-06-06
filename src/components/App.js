@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Banner from "./Banner";
 import Cart from "./Cart";
@@ -9,9 +9,15 @@ import Footer from "./Footer";
 import "../styles/App.css";
 
 function App() {
-  const [cart, setCart] = useState({});
+  const savedCart = localStorage.getItem("cart");
+
+  const [cart, setCart] = useState(savedCart ? JSON.parse(savedCart) : {});
   const [cartIsOpen, setCartIsOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("all");
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <div className="app-wrapper">
