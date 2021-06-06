@@ -2,7 +2,7 @@
   position: relative;
 
   width: 30%;
-  height: 15rem;
+  height: 22rem;
   margin: 1rem 0.75rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.5rem 0.5rem #dddeda;
@@ -10,7 +10,7 @@
 }
 
 .plant-item__cover {
-  height: 8rem;
+  height: 15rem;
   overflow: hidden;
 
   text-align: center;
@@ -55,15 +55,16 @@
 
 .btn-add-to-cart {
   padding: 0.25rem 0.5rem;
-  border: none;
+  border: 0.125rem solid #026178;
   border-radius: 0.25rem;
   box-shadow: 0 0.125rem 0.5rem #dddeda;
 
-  color: white;
+  color: #026178;
   font-weight: 700;
 
-  background: #026178;
-  transition: box-shadow 200ms, opacity 200ms, transform 200ms;
+  background: #d6f7ff;
+  transition: box-shadow 200ms, color 200ms, background-color 200ms,
+    opacity 200ms, transform 200ms;
 
   cursor: pointer;
 }
@@ -71,6 +72,9 @@
 .btn-add-to-cart:hover {
   box-shadow: 0 0.25rem 1rem #dddeda;
 
+  color: white;
+
+  background: #026178;
   opacity: 0.85;
   transform: translateY(-0.125rem);
 }
